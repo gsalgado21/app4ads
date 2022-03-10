@@ -1,0 +1,42 @@
+<!--
+  Generated template for the ImcPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <button ion-button icon-only color="danger" (click)="close()">
+      <ion-icon name="arrow-back"></ion-icon>
+    </button>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <h2 class="titulo">Cálculo de IMC</h2>
+    <br>
+
+      <ion-item lines="none">
+        <ion-input placeholder="Insira seu peso" [(ngModel)]="peso" type="number"></ion-input>
+      </ion-item>
+    
+      <ion-item lines="none">
+        <ion-input placeholder="Insira sua altura" [(ngModel)]="altura" type="number"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <button ion-button full (click)="calcular()">Calcular IMC</button>  
+      </ion-item>
+
+
+      <h3>
+        <p class="titulo" *ngIf="imc">Seu IMC é {{imc}}</p>
+        <p class="titulo" *ngIf="resultado">{{resultado}}</p>
+      </h3>
+
+</ion-content>
+
+<ion-footer>
+
+</ion-footer>
